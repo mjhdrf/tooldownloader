@@ -2,7 +2,8 @@
 
 # default versions
 
-SITE="http://files.uk.pfsense.org/mirror/downloads/pfSense-2.0.1-RELEASE-amd64.iso.gz"
+FILE="pfSense-2.0.1-RELEASE-amd64.iso.gz"
+SITE="http://files.uk.pfsense.org/mirror/downloads/$FILE"
 WGET="-mc -nd --limit-rate=500k"
 
 #GPG="--no-default-keyring --keyring priam.gpg"
@@ -11,7 +12,5 @@ WGET="-mc -nd --limit-rate=500k"
 wget ${WGET} ${SITE}
 wget ${WGET} ${SITE}.sha256
 
-unzip Spider_Release_2008_Steatoda.zip Spider_Release_2008/Spider4.msi
-
-sha256sum -c ${SITE}.sha256
+sha256sum -c ${FILE}.sha256
 
