@@ -14,3 +14,4 @@ wget ${WGET} ${SITE}.sha256
 
 sha256sum -c ${FILE}.sha256
 
+gzip -d ${FILE}
